@@ -1,0 +1,12 @@
+name = "P4P"
+uuid = "22628b5c-e01d-4582-92b9-755789d4ce9a"
+authors = ["m410y <m410y@proton.me>"]
+version = "0.1.0"
+
+[deps]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
+
+[compat]
+Dates = "1.11.0"
+FileIO = "1.16.6"

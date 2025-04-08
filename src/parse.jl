@@ -11,7 +11,7 @@ function parse_file_id(line::AbstractString)
     version = parse(VersionNumber, strip(line[34:45]))
     m = match(r"(\d{2})/(\d{2})/(\d{2}) (\d{2}):(\d{2}):(\d{2})", line[47:63])
     datetime = parse.(Int, m.captures)
-    year = datetime[3] + datetime[3] < 80 ? 2000 : 1900
+    year = datetime[3] + (datetime[3] < 80 ? 2000 : 1900)
     timestamp = DateTime(year, datetime[1:2]..., datetime[4:6]...)
     project = strip(line[65:76])
     return program, program_version, version, timestamp, project

@@ -154,7 +154,7 @@ function parse_saint_inegration(line::AbstractString)
     tokens = split(line[8:end])
     ints = parse.(Int, tokens[1:2])
     floats = parse.(Float64, tokens[3:4])
-    return ins..., floats...
+    return ints..., floats...
 end
 
 function parse_saint_refinement(line::AbstractString)
